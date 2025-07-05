@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
 import java.util.concurrent.RecursiveTask;
-public class UI_Connection extends JFrame {
+public class UI_Connection extends JFrame implements ActionListener{
 
     //UI
     JLabel L1, L2, L3;
@@ -40,6 +40,25 @@ public class UI_Connection extends JFrame {
          b3.setBounds(100,220,100,30);
          b4.setBounds(220,220,100,30);
 
+         add(L1);
+         add(tf1);
+         add(L2);
+         add(tf2);
+         add(L3);
+         add(tf3);
+
+         add(b1);
+         add(b2);
+         add(b3);
+         add(b4);
+
+         b1.addActionListener(this);
+         b2.addActionListener(this);
+         b3.addActionListener(this);
+         b4.addActionListener(this);
+
+         setSize(400,400);
+         setVisible(true);
     }
     public static void main(String[] args) {
         
